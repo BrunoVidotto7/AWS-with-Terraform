@@ -1,5 +1,5 @@
 terraform {
-  required_version = "0.14.4"
+  required_version = "1.1.5"
 
   required_providers {
     aws = {
@@ -10,8 +10,8 @@ terraform {
 }
 
 provider "aws" {
-  region  = "eu-central-1"
-  profile = "tf014"
+  region  = "us-east-1"
+  #profile = "tf014"
 }
 
 data "aws_caller_identity" "current" {}
@@ -26,8 +26,8 @@ resource "aws_s3_bucket" "remote-state" {
   tags = {
     Description = "Stores terraform remote state files"
     ManagedBy   = "Terraform"
-    Owner       = "Cleber Gasparoto"
-    CreatedAt   = "2021-01-24"
+    Owner       = "Bruno Vidotto"
+    CreatedAt   = "2021-03-10"
   }
 }
 
