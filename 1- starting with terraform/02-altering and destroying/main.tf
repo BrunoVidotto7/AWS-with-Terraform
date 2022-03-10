@@ -1,5 +1,5 @@
 terraform {
-  required_version = "0.14.4"
+  required_version = "1.1.5"
 
   required_providers {
     aws = {
@@ -9,10 +9,9 @@ terraform {
   }
 }
 
-# https://registry.terraform.io/providers/hashicorp/aws/latest/docs#environment-variables
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 provider "aws" {
-  region  = "eu-central-1" # Recomendo a região us-east-1 se você estiver no Brasil
-  profile = "tf014"        # Usar este atributo somente se não for o profile "default" no arquivo ~/.aws/credentials
+  region  = "us-east-1"
 }
 
 # terraform validate
@@ -28,7 +27,7 @@ resource "aws_s3_bucket" "my-test-bucket" {
     Name        = "My first Terraform bucket"
     Environment = "Dev"
     ManagedBy   = "Terraform"
-    Owner       = "Cleber Gasparoto"
-    CreatedAt   = "2021-01-14"
+    Owner       = "Bruno Vidotto"
+    CreatedAt   = "2022-03-10"
   }
 }
