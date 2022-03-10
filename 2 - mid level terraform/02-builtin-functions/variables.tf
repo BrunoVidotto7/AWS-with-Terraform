@@ -9,7 +9,7 @@ variable "aws_region" {
 variable "instance_ami" {
   type        = string
   description = ""
-  default     = "ami-0233214e13e500f77"
+  default     = "ami-0ff8a91507f77f867"
 
   validation {
     condition     = length(var.instance_ami) > 4 && substr(var.instance_ami, 0, 4) == "ami-"
